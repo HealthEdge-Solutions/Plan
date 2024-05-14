@@ -5,12 +5,11 @@
 2. Doctor (Лікар)
 3. MedicalRecord (Медична картка)
 4. Appointment (Запис на прийом)	
-5. Medication (Ліки)
-6. MedicalFacility (Медичний заклад)
-7. TreatmentPlan (План лікування)
-8. MedicalTest (Медичний тест)
-9. MedicalInsurance (Медичне страхування)
-10. BillingInvoice (Рахунок за лікування)
+5. MedicalFacility (Медичний заклад)
+6. TreatmentPlan (План лікування)
+7. MedicalTest (Медичний тест)
+8. MedicalInsurance (Медичне страхування)
+9. BillingInvoice (Рахунок за лікування)
 	
 Ось приклад Logical View, точніше, його каркасу ... 
 
