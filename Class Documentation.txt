@@ -29,7 +29,7 @@
 
 Базові поля для класів : 
 
-MedicalRecords 1.  Patient (Пацієнт) :
+1.  Patient (Пацієнт) :
    - PatientId: int (ідентифікатор пацієнта)
    - Name: string (ім'я пацієнта)
    - DateOfBirth: DateTime (дата народження пацієнта)
@@ -63,15 +63,15 @@ MedicalRecords 1.  Patient (Пацієнт) :
    - Address: string (адреса медичного закладу)
    - Doctors: List<Doctor> (список лікарів, які працюють у цьому закладі)
 
-Doctors 
+ 
 6.  TreatmentPlan (План лікування) :
    - TreatmentPlanId: int (ідентифікатор плану лікування)
    - PatientId: int (ідентифікатор пацієнта, для якого складено план лікування)
    - DoctorId: int (ідентифікатор лікаря, який склав план лікування)
    - Description: string (опис плану лікування)
-   - Medications: List<Medication> (список призначених ліків)
+   - MedicationsNeeded: List<Medication> (список призначених ліків)
 
-Medications 
+ 
 7.  MedicalTest (Медичний тест) :
    - MedicalTestId: int (ідентифікатор медичного тесту)
    - PatientId: int (ідентифікатор пацієнта, який проходить тест)
@@ -92,6 +92,7 @@ Medications
    - Amount: decimal або float (сума рахунку)
    - IssuedDate: DateTime (дата виставлення рахунку)
    - DueDate: DateTime (термін сплати рахунку)
+
 
 Ось уже існуючі проекти на цю тему 
 https://smartmedicalcenter.ua/	-> Smart Medical Center 
