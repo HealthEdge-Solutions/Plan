@@ -27,10 +27,71 @@
 
 Допоміжні класи (Helper Classes): Це можуть бути будь-які додаткові класи або утиліти, які допомагають в реалізації функціональності додатку.
 
+Базові поля для класів : 
 
+MedicalRecords 1.  Patient (Пацієнт) :
+   - PatientId: int (ідентифікатор пацієнта)
+   - Name: string (ім'я пацієнта)
+   - DateOfBirth: DateTime (дата народження пацієнта)
+   - Address: string (адреса пацієнта)
+   - InsurancePolicyNumber: string (номер медичного страхового полісу)
+   - MedicalRecords: List<MedicalRecord> (список медичних карток пацієнта)
 
+2.  Doctor (Лікар) :
+   - DoctorId: int (ідентифікатор лікаря)
+   - Name: string (ім'я лікаря)
+   - Specialization: string (спеціалізація лікаря)
+   - MedicalFacilityId: int (ідентифікатор медичного закладу, де працює лікар)
+   - Appointments: List<Appointment> (список записів на прийоми, які призначені цьому лікарю)
 
+3.  MedicalRecord (Медична картка) :
+   - MedicalRecordId: int (ідентифікатор медичної картки)
+   - PatientId: int (ідентифікатор пацієнта, до якого вона відноситься)
+   - Date: DateTime (дата ведення медичної картки)
+   - Diagnosis: string (діагноз)
+   - Medications: List<Medication> (список призначених ліків)
 
+4.  Appointment (Запис на прийом) :
+   - AppointmentId: int (ідентифікатор запису на прийом)
+   - PatientId: int (ідентифікатор пацієнта, який записується на прийом)
+   - DoctorId: int (ідентифікатор лікаря, до якого записується пацієнт)
+   - DateTime: DateTime (дата та час прийому)
+
+5.  MedicalFacility (Медичний заклад) :
+   - MedicalFacilityId: int (ідентифікатор медичного закладу)
+   - Name: string (назва медичного закладу)
+   - Address: string (адреса медичного закладу)
+   - Doctors: List<Doctor> (список лікарів, які працюють у цьому закладі)
+
+Doctors 
+6.  TreatmentPlan (План лікування) :
+   - TreatmentPlanId: int (ідентифікатор плану лікування)
+   - PatientId: int (ідентифікатор пацієнта, для якого складено план лікування)
+   - DoctorId: int (ідентифікатор лікаря, який склав план лікування)
+   - Description: string (опис плану лікування)
+   - Medications: List<Medication> (список призначених ліків)
+
+Medications 
+7.  MedicalTest (Медичний тест) :
+   - MedicalTestId: int (ідентифікатор медичного тесту)
+   - PatientId: int (ідентифікатор пацієнта, який проходить тест)
+   - DoctorId: int (ідентифікатор лікаря, який призначив тест)
+   - Type: string (тип медичного тесту)
+   - Results: string  (результати тесту)
+
+8.  MedicalInsurance (Медичне страхування) :
+   - InsurancePolicyNumber: string (номер медичного страхового полісу)
+   - PatientId: int (ідентифікатор пацієнта, якому належить страховий поліс)
+   - Company: string (назва страхової компанії)
+   - ValidFrom: DateTime (дата початку дії страхового полісу)
+   - ValidTo: DateTime (дата закінчення дії страхового полісу)
+
+9.  BillingInvoice (Рахунок за лікування) :
+   - InvoiceId: int (ідентифікатор рахунку)
+   - PatientId: int (ідентифікатор пацієнта, якому виставлено рахунок)
+   - Amount: decimal або float (сума рахунку)
+   - IssuedDate: DateTime (дата виставлення рахунку)
+   - DueDate: DateTime (термін сплати рахунку)
 
 Ось уже існуючі проекти на цю тему 
 https://smartmedicalcenter.ua/	-> Smart Medical Center 
