@@ -35,7 +35,7 @@
    - DateOfBirth: DateTime (дата народження пацієнта)
    - Address: string (адреса пацієнта)
    - InsurancePolicyNumber: string (номер медичного страхового полісу)
-   - MedicalRecords: List<MedicalRecord> (список медичних карток пацієнта)
+   - MedicalRecord: MedicalRecord (медична картка пацієнта)
 
 2.  Doctor (Лікар) :
    - DoctorId: int (ідентифікатор лікаря)
