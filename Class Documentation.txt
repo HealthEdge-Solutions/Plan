@@ -49,7 +49,7 @@
    - PatientId: int (ідентифікатор пацієнта, до якого вона відноситься)
    - Date: DateTime (дата ведення медичної картки)
    - Diagnosis: string (діагноз)
-   - Medications: List<Medication> (список призначених ліків)
+   - Medications: List<string> (список призначених ліків)
 
 4.  Appointment (Запис на прийом) :
    - AppointmentId: int (ідентифікатор запису на прийом)
